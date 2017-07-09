@@ -2,7 +2,10 @@
 echo '||';
 system('hostname');
 echo '||';
-sysmte('uptime');
+exec('ls ./sync | wc -l', $op);
+echo trim(implode("",$op));
+echo '||';
+system('uptime');
 echo '||';
 system('ifconfig');
 echo '||';
